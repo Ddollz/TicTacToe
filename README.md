@@ -3,7 +3,8 @@
 This is my first Simple AI with a simple popular game called Tic Tac Toe<br />
 there are many ways to improve and clean up the code 
 (im just too tired to clean it)
-I used Minimax Algorithm for the AI you may read it in https://en.wikipedia.org/wiki/Minimax
+I used Minimax Algorithm for the AI you may read it in https://en.wikipedia.org/wiki/Minimax <br >
+I do other projects from other people feel free to contact me ~
 
 <h3>How to run: </h3>
 There is two folder one with AI and the other one is none<br />
