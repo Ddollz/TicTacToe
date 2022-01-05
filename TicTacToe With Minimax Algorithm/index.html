@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+    <!-- <div class="TempColors">
+        BG 1: #1C1C1BFF
+        <br>
+        Primary: #f1f2f6
+        <br>
+        secondary: #79AEB2
+    </div> -->
+    <header class="heading">
+        <h1>Tic Tac Toe</h1>
+        <h3>Pure HTML, CSS, JS</h3>
+        <h5>By Ddollz</h5>
+    </header>
+
+    <section class="Table-Section">
+        <div class="Score">
+            <div class="playerx">
+                X: <span id="scoreX">0</span>
+            </div>
+            <div class="playero">
+                <span id="scoreO">0</span> :O
+            </div>
+        </div>
+        <table id="grid" class="Grid-Div" cellspacing="0" cellpadding="0">
+            <tr>
+                <td cellNumber="1" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+                <td cellNumber="2" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+                <td cellNumber="3" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+            </tr>
+
+            <tr>
+                <td cellNumber="4" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+                <td cellNumber="5" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+                <td cellNumber="6" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+            </tr>
+
+            <tr>
+                <td cellNumber="7" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+                <td cellNumber="8" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+                <td cellNumber="9" onmouseover="DataHoverIn(this)" onmouseout="DataHoverOut(this)" onmousedown="cellSelect(this)"></td>
+            </tr>
+        </table>
+        
+        <div class = "texs">
+            (Minimax Algorithm)
+        </div>
+    </section>
+
+    <div class="splash" id="splash">
+        <h1 id="splash-text" class="splash-text"></h1>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
