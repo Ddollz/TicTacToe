@@ -61,6 +61,7 @@ function cellSelect(x) {
         runWindowReset();
         AImove();
     }
+    console.log(grid)
 
 }
 
@@ -85,10 +86,10 @@ function gridCheck() {
         }
     }
 
-    //? Check Vertical Cells
+    //? Check horizontal Cells
     if(grid[0][0]==grid[1][0] && grid[0][0]==grid[2][0])return grid[0][0]
-    else if(grid[0][1]==grid[1][1] && grid[0][1]==grid[2][1]) return grid[0][0]
-    else if(grid[0][2]==grid[1][2] && grid[0][2]==grid[2][2]) return grid[0][0]
+    else if(grid[0][1]==grid[1][1] && grid[0][1]==grid[2][1]) return grid[0][1]
+    else if(grid[0][2]==grid[1][2] && grid[0][2]==grid[2][2]) return grid[0][2]
     
 
     //? Check Diagonal Cells
@@ -138,17 +139,15 @@ function runWindowReset() {
         if (winner == "X") {
             xScore += 1;
             xCurScore.innerHTML = xScore;
-        } else if (winner == "O") {
+        }
+        if (winner == "O") {
             oScore += 1;
             oCurScore.innerHTML = oScore;
         }
         screenSplash(winner + " Wins!")
         // resetGrid();
-    }
-    
-    else if (checkDraw()){
+    } else if (checkDraw()){
         screenSplash("Tie!")
-        // resetGrid();
     }
 }
 
@@ -276,8 +275,6 @@ function minimax(grid, isMaximizing) {
     //? It's a decision rule that the computer(AI) will fight itself to
     //? gain minimize the possible loss for worst case scenario 
 
-
-
     //? This is the depth or terminal node it determines when the search loop ends
     if (gridCheck() == "X") return 10
 
@@ -333,6 +330,5 @@ function minimax(grid, isMaximizing) {
         return bestScore
     }
 }
-
 //? Player(AI) first move
 AImove();
