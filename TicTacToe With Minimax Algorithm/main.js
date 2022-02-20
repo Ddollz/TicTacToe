@@ -11,6 +11,10 @@ let xCurScore = document.getElementById("scoreX");
 let oCurScore = document.getElementById("scoreO");
 let table = document.getElementById("grid");
 
+
+let splash = document.getElementById("splash");
+let text = document.getElementById("splash-text");
+
 let grid = [
     ['1', '2', '3'],
     ['4', '5', '6'],
@@ -139,23 +143,19 @@ function runWindowReset() {
             oCurScore.innerHTML = oScore;
         }
         screenSplash(winner + " Wins!")
-        resetGrid();
+        // resetGrid();
     }
     
-    if (checkDraw()){
+    else if (checkDraw()){
         screenSplash("Tie!")
-        resetGrid();
+        // resetGrid();
     }
 }
 
 function screenSplash(splashText){
-    let splash = document.getElementById("splash");
-    let text = document.getElementById("splash-text");
     text.innerHTML = splashText;
     splash.classList.add('splash-block');
-    setTimeout(function () {
-        splash.classList.remove('splash-block');
-    }, 1000)
+    splash.classList.add('active');
 }
 
 //! Reset Grid
@@ -179,6 +179,7 @@ function resetGrid() {
     }
     AImove();
 
+    splash.classList.remove('splash-block');
 }
 
 //? Selection cell Check
